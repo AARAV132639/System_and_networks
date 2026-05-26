@@ -1,0 +1,11 @@
+
+# Ignore files with no extension (compiled C binaries on Linux/macOS)
+# Note: This ignores everything without a dot.
+*
+!*.*
+!*/
+
+# IDE and System Files
+.vscode/
+.DS_Store
+Thumbs.db
