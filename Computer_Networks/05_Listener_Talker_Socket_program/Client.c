@@ -57,7 +57,7 @@ int main()
          0);
     printf("Message sent.\n");
 
-    // Step 5: Close socket
+    // Step 5: Close socket.
     close(sock);
     return 0;
 }
