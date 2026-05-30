@@ -84,7 +84,7 @@ int main()
     {
         if(strcmp(dict[j].str,current)==0)
         {
-            printf("%d", dict[j].code);
+            printf("%d ", dict[j].code);
             break;
         }
     }
