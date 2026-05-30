@@ -12,3 +12,8 @@
 - The buffer dumps its next to the screen when it hits a newline character \n
 - During ./main previously the program may have finished so quickly that the VS code terminal closed the stream before the buffer could flus
 - Chaining the commands changes how the shell process manages the standard output stream, forcing your terminal to display the text instantly.
+
+## Phase 2
+- Added FP table
+- DES Later performs: 64-bit plaintext--->IP--->16 Fiestal rounds---> FP---> cipher text
+- FP(IP(x))=x

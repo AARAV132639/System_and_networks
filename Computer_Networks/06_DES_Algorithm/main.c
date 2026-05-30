@@ -9,9 +9,10 @@ int main()
 {
     printf("---Program started---\n");
 
-    
+
     int input[64];
-    int output[64];
+    int afterIP[64];
+    int afterFP[64];
 
     /*
     Create test pattern
@@ -24,18 +25,27 @@ int main()
         input[i] = i + 1;
     }
 
+    // Applying initial permutation
     permute(
         input,
-        output,
+        afterIP,
         IP,
         64
     );
 
-    printf("After Initial Permutation:\n");
+    // Applying final permutation
+    permute(
+        afterIP,
+        afterFP,
+        FP,
+        64
+    );
+
+    printf("Recovered data:\n");
 
     for(int i=0;i<64;i++)
     {
-        printf("%d ", output[i]);
+        printf("%d ", afterFP[i]);
     }
 
     printf("\n");
