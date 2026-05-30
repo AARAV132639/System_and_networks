@@ -4,51 +4,54 @@
 
 #include "tables.h"
 #include "permutations.h"
+#include "bit_utils.h"
 
 int main()
 {
-    printf("---Program started---\n");
+    unsigned long long plaintext;
 
-
-    int input[64];
+    int bits[64];
     int afterIP[64];
-    int afterFP[64];
 
-    /*
-    Create test pattern
+    int L[32];
+    int R[32];
 
-    1 2 3 ... 64
-    */
+    printf("Enter plaintext:");
+    scanf("%llu",&plaintext);
 
-    for(int i=0;i<64;i++)
-    {
-        input[i] = i + 1;
-    }
+    // convert plain texts into 64 bits
+    uint64ToBits(
+        plaintext,
+        bits
+    );
+    printf("\n Original Bits:\n");
+    printBits(bits,64);
 
-    // Applying initial permutation
+    //Apply initial permutation
+
     permute(
-        input,
+        bits,
         afterIP,
         IP,
         64
     );
 
-    // Applying final permutation
-    permute(
-        afterIP,
-        afterFP,
-        FP,
-        64
-    );
+    printf("\n After IP:\n");
+    printBits(afterIP, 64);
 
-    printf("Recovered data:\n");
+    //Split into L0 and R0
 
-    for(int i=0;i<64;i++)
-    {
-        printf("%d ", afterFP[i]);
-    }
+    for(int i=0;i<32;i++) L[i]= afterIP[i];
 
-    printf("\n");
+    for(int i=0;i<32;i++) R[i]= afterIP[i+32];
+
+    printf("\n L0:\n");
+    printBits(L,32);
+
+    printf("\n R0:\n");
+    printBits(R,32);
 
     return 0;
+
+
 }

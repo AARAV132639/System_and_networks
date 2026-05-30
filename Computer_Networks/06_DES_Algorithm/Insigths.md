@@ -17,3 +17,18 @@
 - Added FP table
 - DES Later performs: 64-bit plaintext--->IP--->16 Fiestal rounds---> FP---> cipher text
 - FP(IP(x))=x
+
+## Phase 3: Bit representation and splitting
+1. Goal--->
+            1. 64-bit Plaintext
+            2. Convert to bit array
+            3. Apply IP
+            4. Split into: L0 (32 bits) R0(32 bits)
+            - This is exactly what DES does before Round 1
+
+2. Why split into L and R?
+    - Because DES is a Feistal cipher
+    - Every round operates on Li and Ri
+    - Round transformation is: Li = R_i-1
+    - R_i= L_i-1 ^ F(R_i-1, K_i)
+    - Thus before starting Rounds we need L0 and R0
