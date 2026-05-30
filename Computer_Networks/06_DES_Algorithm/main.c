@@ -5,12 +5,15 @@
 #include "tables.h"
 #include "permutations.h"
 #include "bit_utils.h"
+#include "key_schedule.h"
 
 int main()
 {
     unsigned long long plaintext;
+    unsigned long long key;
 
     int bits[64];
+    int keybits[64];
     int afterIP[64];
 
     int L[32];
@@ -19,6 +22,9 @@ int main()
     printf("Enter plaintext:");
     scanf("%llu",&plaintext);
 
+    printf("Enter key: ");
+    scanf("%llu", &key);
+
     // convert plain texts into 64 bits
     uint64ToBits(
         plaintext,
@@ -26,6 +32,26 @@ int main()
     );
     printf("\n Original Bits:\n");
     printBits(bits,64);
+
+    //Converting key to bits
+    uint64ToBits(
+        key,
+        keybits
+    );
+
+    //Generating round key
+
+    int roundKeys[16][48];
+
+    generateRoundKeys(
+        keybits,
+        roundKeys
+    );
+
+    printf("\nK1:\n");
+
+    for(int i=0;i<48;i++) printf("%d ", roundKeys[0][i]);
+    printf("\n");
 
     //Apply initial permutation
 

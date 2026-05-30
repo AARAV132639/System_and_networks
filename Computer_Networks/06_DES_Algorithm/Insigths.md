@@ -32,3 +32,18 @@
     - Round transformation is: Li = R_i-1
     - R_i= L_i-1 ^ F(R_i-1, K_i)
     - Thus before starting Rounds we need L0 and R0
+
+## Phase 4: Key Scheduling
+
+1. Workflow:
+            - Enter plaintext
+            - Enter key
+            - Convert plain text--->bits
+            - Convert key---> bits
+            - Generate K1-K16
+            - Print K1
+            - Apply IP
+            - Split L0/R0
+
+2. updated table.h in which used the keyword *extern* to tell the files that this exists somewhere else
+3. Linker error means global variables have been defined multiple places
