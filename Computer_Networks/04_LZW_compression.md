@@ -123,6 +123,69 @@
 
 ## Applications and limitations
 
+1. Where is LZW used?
+
+- LZW became famous because it was simple and worked well on repetitive data
+
+- GIF images, Early Unix compress utility, Fax/Document transmission etc
+
+---
+
+2. What are the limitations?
+
+- Dictionary Keeps Growing.
+    - Suppose a case where there is no repetition. In that case LZW keeps adding entries and rarely using them.
+
+- Memory consumpiton. Hence real implemenations usually cap dictionary size or periodically reset dictionary
+
+- Not optimal. LZW discovers repeated patterns. But it doesn't know probabilities
+    - E.g. A appears 70% B appears 30%. LZW treats both equally
+
+- Random data defeats it. For cases like ZIP, JPEG, MP4, encrypted files LZW makes things larger.
+- Why? Because there are no useful repetitions to exploit.
+
+---
+
+3. How LZW is different from Huffman coding?
+
+- They are basically brothers solving different problems
+
+- Huffman questions---> *Which symbol occurs most often?*
+
+    - E.g: AAAAAAAABBC
+    - Frequency: A=8, B=2, C=1
+    - Huffman creates: A=0. B=10, C=1. Why?---Look up Huffman coding
+
+    - Frequent symbols get shorter codes
+
+- LZW questions ----> *Which pattern repeat?*
+
+    - E.g.: ABABABAB
+    - LZW discovers: AB, ABA, ABAB... and assign codes
+
+- Which is better?----> Depends on the condition. 
+    - If data is repetitive LZW wins while on frequency skewed data Huffman wins.
+
+---
+
+4. Why do modern compressors combine them?
+
+- Each solves a different problems.
+
+- Classic pipeline: Data---> LZ77/LZW---> Huffman----> Compressed file
+
+- LZW finds repeated patterns, Huffman then compresses the resulting symbols according to frequency. Best of both worlds.
+
+---
+
+5. What' next?
+
+- Implement LZW using Trie
+- LZW decompressor [Famous KwKwK case]
+- Bit packing
+- Implement Huffman coding
+- Implement DEFLATE [algorithm behind ZIP PNG gzip]
+
 ---
 
 ## Fun diving
