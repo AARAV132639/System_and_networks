@@ -82,3 +82,14 @@
 - S-boxes are most important part of DES security. Almost all DES resistance to attacks comes from them.
 
 - Next step: Add S1-S8 tables and convert 48 bits back to 32 bits
+
+## Phase 5: S- boxes
+
+1. What are S- boxes?
+
+- Currently we have: ExpandedR XOR K1---> 48 bits
+- DES splits this into 8 groups and 6 bits each and each group goes to an s box
+- Each S-box performs: 6 bits---> 4 bits.
+- Hence 8x6=48----> 8x4= 32 bits. This is what DES needs
+
+### How does an S-box works?

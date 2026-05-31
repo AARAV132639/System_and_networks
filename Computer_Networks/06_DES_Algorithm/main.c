@@ -98,6 +98,12 @@ int main()
     for(int i=0;i<48;i++) printf("%d", xorOutput[i]);
     printf("\n");
 
+   int sample6[6]= {1,0,1,0,1,1};
+   int output4[4];
+
+   testS1( sample6, output4);
+
+   for(int i=0;i<4;i++) printf("%d", output4[i]);
 
     return 0;
 

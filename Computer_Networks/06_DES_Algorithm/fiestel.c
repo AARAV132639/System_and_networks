@@ -34,3 +34,20 @@ void xor48(
 {
     for(int i=0;i<48;i++) result[i]= a[i]^b[i];
 }
+
+void testS1( int input6[6], int output4[4])
+{
+    int row; int col;
+
+    row= input6[0]*2+input6[5];
+
+    col= input6[1]*8+input6[2]*4+input6[3]*2+input6[4];
+
+    int value= S1[row][col];
+
+    for(int i=3; i>=0;i--) 
+    {
+        output4[i]= value%2;
+        value/=2;
+    }
+}

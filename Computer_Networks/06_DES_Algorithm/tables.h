@@ -9,7 +9,7 @@ extern int PC1[56];
 extern int PC2[48];
 extern int SHIFTS[16];
 extern int E[48];
-
+extern int S1[4][16];
 #endif
 
 
