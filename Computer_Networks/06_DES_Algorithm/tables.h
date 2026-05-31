@@ -8,6 +8,7 @@ extern int FP[64];
 extern int PC1[56];
 extern int PC2[48];
 extern int SHIFTS[16];
+extern int E[48];
 
 #endif
 
@@ -35,4 +36,7 @@ extern int SHIFTS[16];
 4. What is PC-2?
 - 56 bits---> 48 bits
 - Selects bits used in round key
+
+5. What does E do?
+- Expansion duplicates boundary bits
 */

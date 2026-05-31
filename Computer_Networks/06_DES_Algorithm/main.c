@@ -6,6 +6,7 @@
 #include "permutations.h"
 #include "bit_utils.h"
 #include "key_schedule.h"
+#include "fiestel.h"
 
 int main()
 {
@@ -18,6 +19,8 @@ int main()
 
     int L[32];
     int R[32];
+
+    int expandedR[48];
 
     printf("Enter plaintext:");
     scanf("%llu",&plaintext);
@@ -76,6 +79,15 @@ int main()
 
     printf("\n R0:\n");
     printBits(R,32);
+
+    //expanding bits
+    int expanded[48];
+    expandR(R, expandedR);
+
+    printf("\n Expanded R:\n");
+    
+    for(int i=0;i<48;i++) printf("%d",expanded[i]);
+    printf("\n");
 
     return 0;
 

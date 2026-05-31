@@ -47,3 +47,26 @@
 
 2. updated table.h in which used the keyword *extern* to tell the files that this exists somewhere else
 3. Linker error means global variables have been defined multiple places
+
+## Phase 4A: Expansion Table
+
+1. clear && gcc main.c permutations.c bit_utils.c fiestel.c key_schedule.c tables.c -o  main && ./main
+
+2. Flow inside main():
+                    - read plaintext
+                    - read key
+                    - convert plaintext--->bits
+                    - convert key--->bits
+                    - generate roundkeys
+                    - Apply IP
+                    - Split into L0 R0
+                    - Expand R0 ---> expandedR(48 bits)
+                    - print expandedR
+
+3. The right half R0 containts 32 bits, Round key K1 has 48 bits
+4. To XOR them sizes must match. Thus DES expands 32 bits to 48 bits using Expansion table
+5. What does E do?----> It performs expansion of duplicates boundary bits
+    E.g. ABCDEFGH----> HABCDEDEFGHI.... hence some bits appear twice
+6. Next step ExpandedR^K1
+
+## Phase 4B: XOR expanded R with Round Key
