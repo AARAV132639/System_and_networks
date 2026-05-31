@@ -17,4 +17,21 @@ void testS1(
     int input6[6],
     int output[4]
 );
+
+//adding generic function for S-boxes
+void sBoxLookup(
+    int input[64],
+    int sbox[4][16],
+    int output4[4]
+);
+
+void sBoxSubstitution(
+    int input48[48],
+    int output32[32]
+);
+
+void pPermutation(
+    int input32[32],
+    int output32[32]
+);
 #endif

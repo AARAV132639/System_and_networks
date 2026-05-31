@@ -98,12 +98,27 @@ int main()
     for(int i=0;i<48;i++) printf("%d", xorOutput[i]);
     printf("\n");
 
-   int sample6[6]= {1,0,1,0,1,1};
-   int output4[4];
+   // testing complete pipelineint sboxOutput[32];
+    int pOutput[32]; int sboxOutput[32]; 
 
-   testS1( sample6, output4);
+    sBoxSubstitution(xorOutput,  sboxOutput );
 
-   for(int i=0;i<4;i++) printf("%d", output4[i]);
+    pPermutation(sboxOutput, pOutput);
+
+    //printing
+
+    printf("\nAfter S-Boxes:\n");
+
+    for(int i=0;i<32;i++) printf("%d", sboxOutput[i]);
+
+    printf("\n");
+
+    printf("\nAfter P-Permutation:\n");
+
+    for(int i=0;i<32;i++) printf("%d", pOutput[i]);
+
+
+    printf("\n");
 
     return 0;
 

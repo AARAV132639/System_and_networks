@@ -93,3 +93,5 @@
 - Hence 8x6=48----> 8x4= 32 bits. This is what DES needs
 
 ### How does an S-box works?
+
+2. Implemented 8 S box structure
