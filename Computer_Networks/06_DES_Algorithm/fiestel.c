@@ -188,3 +188,19 @@ R---> Expansion---> XOR key---> S-boxes---> P-permutations---> 32 bit output. Th
     );
 }
 
+unsigned long long bitsToUint64(
+    int bits[64]
+)
+{
+    unsigned long long value = 0;
+
+    for(int i=0;i<64;i++)
+    {
+        value <<= 1;
+
+        value |= bits[i];
+    }
+
+    return value;
+}
+

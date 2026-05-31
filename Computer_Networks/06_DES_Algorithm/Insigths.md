@@ -97,3 +97,11 @@
 2. Implemented 8 S box structure
 
 ## PHase 6: Final assembling of encryption
+
+- plain text
+- IP
+- 16 DES round
+- Swap
+- FP
+- ciphertext
+- *This is complete DES encryption pipeline*

@@ -11,4 +11,8 @@ void printBits(
     int n
 );
 
+unsigned long long bitsToUint64(
+    int bits[64]
+);
+
 #endif
