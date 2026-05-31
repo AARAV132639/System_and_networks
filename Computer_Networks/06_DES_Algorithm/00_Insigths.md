@@ -50,7 +50,7 @@
 
 ## Phase 4A: Expansion Table
 
-1. clear && gcc main.c permutations.c bit_utils.c fiestel.c key_schedule.c tables.c -o  main && ./main
+1. 
 
 2. Flow inside main():
                     - read plaintext
@@ -104,4 +104,8 @@
 - Swap
 - FP
 - ciphertext
+- DES decrypt
+- Original plaintext recovered
 - *This is complete DES encryption pipeline*
+
+- clear && gcc main.c permutations.c bit_utils.c fiestel.c key_schedule.c tables.c des.c -o  main && ./main

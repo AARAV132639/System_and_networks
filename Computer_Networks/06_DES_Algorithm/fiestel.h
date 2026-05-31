@@ -20,7 +20,7 @@ void testS1(
 
 //adding generic function for S-boxes
 void sBoxLookup(
-    int input[64],
+    int input[6],
     int sbox[4][16],
     int output4[4]
 );
