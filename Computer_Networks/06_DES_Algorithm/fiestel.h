@@ -34,4 +34,12 @@ void pPermutation(
     int input32[32],
     int output32[32]
 );
+
+//full fiestal function
+void feistelFunction(
+    int R[32],
+    int roundKey[48],
+    int output[32]
+);
+
 #endif

@@ -95,3 +95,5 @@
 ### How does an S-box works?
 
 2. Implemented 8 S box structure
+
+## PHase 6: Final assembling of encryption

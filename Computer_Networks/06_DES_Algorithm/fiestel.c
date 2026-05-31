@@ -149,3 +149,42 @@ void pPermutation(
     );
 }
 
+//implementing full fiestel function
+
+void feistelFunction(
+    int R[32],
+    int roundKey[48],
+    int output[32]
+)
+/*
+R---> Expansion---> XOR key---> S-boxes---> P-permutations---> 32 bit output. This is F(R,K)
+*/
+{
+    int expanded[48];
+
+    int xorResult[48];
+
+    int sboxResult[32];
+
+    expandR(
+        R,
+        expanded
+    );
+
+    xor48(
+        expanded,
+        roundKey,
+        xorResult
+    );
+
+    sBoxSubstitution(
+        xorResult,
+        sboxResult
+    );
+
+    pPermutation(
+        sboxResult,
+        output
+    );
+}
+

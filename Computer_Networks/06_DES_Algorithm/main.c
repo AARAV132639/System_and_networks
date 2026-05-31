@@ -80,6 +80,64 @@ int main()
     printf("\n R0:\n");
     printBits(R,32);
 
+    //applying fiestel loop
+
+    for(int round=0; round<16; round++)
+{
+    int fOutput[32];
+    int newL[32];
+    int newR[32];
+
+    /*
+    F(R,Ki)
+    */
+
+    feistelFunction( R,roundKeys[round], fOutput );
+
+    /*
+    Li = Ri-1
+    */
+
+    for(int i=0;i<32;i++)  newL[i] = R[i];
+    
+    /*
+    Ri = Li-1 XOR F(Ri-1,Ki)
+    */
+
+    for(int i=0;i<32;i++) newR[i] = L[i] ^ fOutput[i];
+    
+    /*
+    Update L,R
+    */
+
+    for(int i=0;i<32;i++)
+    {
+        L[i] = newL[i];
+        R[i] = newR[i];
+    }
+
+    printf("\nRound %d Complete",round+1);
+}
+
+    int preOutput[64];
+
+    for (int i=0;i<32; i++) preOutput[i]= R[i];
+    for (int i=0;i<32;i++) preOutput[i+32]= L[i]; // To be noticed: R first and L second. This is DES's final swap
+
+    //applying FP
+    int cipherBits[64];
+
+    permute(preOutput, cipherBits, FP, 64);
+
+    //printing cipher text bits
+    printf("\n Cipher text:\n");
+
+    for(int i=0; i<64;i++) printf("%d", cipherBits[i]);
+
+    printf("\n");
+
+
+
     //expanding bits
     int expanded[48];
     expandR(R, expandedR);
