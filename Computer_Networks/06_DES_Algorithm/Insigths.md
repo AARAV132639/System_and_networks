@@ -70,3 +70,15 @@
 6. Next step ExpandedR^K1
 
 ## Phase 4B: XOR expanded R with Round Key
+
+- For first time Data---> Key mixing
+- This is actual encryption work
+- Before this we were only re arranging bits but now secret key affects data
+
+- Next step: Currently ---> 48 bits. DES cannot continue with 48 bits. It must shrink back to 32 bits
+- This is done by *8 S-boxes*
+
+- Process: 48 bits---> split into 8 groups [6 bits each]---> S1 S2 S3....----> 32 bits
+- S-boxes are most important part of DES security. Almost all DES resistance to attacks comes from them.
+
+- Next step: Add S1-S8 tables and convert 48 bits back to 32 bits

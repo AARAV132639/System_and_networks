@@ -89,6 +89,16 @@ int main()
     for(int i=0;i<48;i++) printf("%d",expanded[i]);
     printf("\n");
 
+    //applying XOR on expanded R
+    int xorOutput[48];
+
+    xor48( expandedR, roundKeys[0], xorOutput);
+    printf("\n ExpandedR XOR K1:\n");
+    
+    for(int i=0;i<48;i++) printf("%d", xorOutput[i]);
+    printf("\n");
+
+
     return 0;
 
 

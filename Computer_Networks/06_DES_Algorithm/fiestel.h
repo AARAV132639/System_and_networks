@@ -6,4 +6,9 @@ void expandR(
     int expanded[48]
 );
 
+void xor48(
+    int a[48],
+    int b[48],
+    int result[48]
+);
 #endif

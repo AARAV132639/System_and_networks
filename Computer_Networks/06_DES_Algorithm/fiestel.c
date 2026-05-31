@@ -16,3 +16,21 @@ void expandR(
         48
     );
 }
+
+/*
+---> Applying XOR logic
+
+0^0=0
+1^1=0
+1^0=1
+0^1=1
+*/
+
+void xor48(
+    int a[48],
+    int b[48],
+    int result[48]
+)
+{
+    for(int i=0;i<48;i++) result[i]= a[i]^b[i];
+}
