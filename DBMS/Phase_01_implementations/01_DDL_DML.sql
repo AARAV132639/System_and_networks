@@ -12,7 +12,7 @@ USE CollegeDB;
 
 -- Create TABLE
 
-CREATE TABLE student(
+CREATE TABLE IF NOT EXISTS student(
 
     StudentID INT PRIMARY KEY,
     Name VARCHAR(50),
@@ -41,6 +41,9 @@ VALUES (101,'Aarav',20,'IT'), (102,'Rahul',21,'IT'), (103, 'Priya',19,'ECE');
 
 INSERT INTO student
 VALUES (104,'Aarav',20,'IT'), (105,'Rahul',21,'IT'), (106, 'Priya',19,'ECE');
+
+INSERT INTO student
+VALUES(107,'Anjali',22,'CSE'), (108, 'ROHAN',19,'ECE'),(109,'Vikram',21,'IT');
 
 
 -- View Records
