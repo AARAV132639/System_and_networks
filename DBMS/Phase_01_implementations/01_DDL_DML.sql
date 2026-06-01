@@ -53,7 +53,7 @@ UPDATE student
 SET Age= 22
 WHERE StudentID= 102;
 
--- Delete Record
+-- Delete Record..
 
 DELETE FROM student
 WHERE StudentID= 103;
