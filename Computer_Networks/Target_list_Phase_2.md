@@ -70,7 +70,7 @@
 
 ## Phase 6 — Network Security Fundamentals
 
-25. **Implementation of DES / AES encryption workflow for secure communication.**
+25. **Implementation of DES / AES encryption workflow for secure communication.** [done]
 
 26. **Implementation of RSA public-key cryptography for secure key exchange.**
 
