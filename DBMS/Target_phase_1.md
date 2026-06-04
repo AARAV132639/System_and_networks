@@ -8,7 +8,7 @@
 
 5. Write SQL queries for Relational Algebra (UNION, INTERSECT, and MINUS, etc.). [done]
 
-6. Write SQL queries for extracting data from more than one table (Equi-Join,Non-Equi-Join, Outer Join)
+6. Write SQL queries for extracting data from more than one table (Equi-Join,Non-Equi-Join, Outer Join)[done]
 
 7. Write SQL queries for sub queries, nested queries.
 
