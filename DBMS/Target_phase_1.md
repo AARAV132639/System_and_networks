@@ -10,7 +10,7 @@
 
 6. Write SQL queries for extracting data from more than one table (Equi-Join,Non-Equi-Join, Outer Join)[done]
 
-7. Write SQL queries for sub queries, nested queries.
+7. Write SQL queries for sub queries, nested queries.[done]
 
 8. Write programs by the use of PL/SQL.
 
