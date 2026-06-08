@@ -2,9 +2,9 @@
 
 - Implemetation to be done in C/C++
 
-1. Implementation of line generation using slope’s method, DDA and Bresenham’s algorithms.
+1. Implementation of line generation using slope’s method, DDA and Bresenham’s algorithms. [done]
 
-2. Implementation of circle generation using Mid-point method and Bresenham’s algorithm.
+2. Implementation of circle generation using Mid-point method and Bresenham’s algorithm. 
 
 3. Implementation of ellipse generation using Mid-point method.
 
