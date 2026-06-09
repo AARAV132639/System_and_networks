@@ -4,9 +4,9 @@
 
 1. Implementation of line generation using slope’s method, DDA and Bresenham’s algorithms. [done]
 
-2. Implementation of circle generation using Mid-point method and Bresenham’s algorithm. 
+2. Implementation of circle generation using Mid-point method and Bresenham’s algorithm. [done]
 
-3. Implementation of ellipse generation using Mid-point method.
+3. Implementation of ellipse generation using Mid-point method. [done] [output_not_suitable_yet]
 
 4. Implementation of polygon filling using Flood-fill, Boundary-fill and Scan-line algorithms.
 
