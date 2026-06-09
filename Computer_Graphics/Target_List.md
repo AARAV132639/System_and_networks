@@ -8,7 +8,7 @@
 
 3. Implementation of ellipse generation using Mid-point method. [done] [output_not_suitable_yet]
 
-4. Implementation of polygon filling using Flood-fill, Boundary-fill and Scan-line algorithms.
+4. Implementation of polygon filling using Flood-fill, Boundary-fill and Scan-line algorithms. 
 
 5. Implementation of 2-D transformation: Translation, Scaling, Rotation, MirrorReflection and Shearing (write a menu driven program).
 
