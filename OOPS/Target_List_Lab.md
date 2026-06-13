@@ -25,23 +25,23 @@ appropriate accessors for these variables. Don’t forget to include appropriate
 for your classes. Then create a class with a main () method that manages your classes.
 
 8. Develop an applet that receives three numeric values from the user and displays the largest
-of the three on the screen. Write a HTML page that embeds this applet.
+of the three on the screen. Write a HTML page that embeds this applet. 
 
-9. Write an applet which draws a human face with ovals and arcs.
+9. Write an applet which draws a human face with ovals and arcs. 
 
 10. Write servlets that accepts user preferences (color, hobby etc.) from user, saves it as cookie
 on user machine and reads the cookie from the user machine.
 
 11. Write an AWT application with checkbox such that all cable TV channels will be displayed
-from the selected category.
+from the selected category. 
 
 12. Create a simple Swing based applet that displays two buttons. Each time a button is clicked,
-a message is displayed that states which button was clicked.
+a message is displayed that states which button was clicked. 
 
 13. Create JSP code that uses a persistant cookie (i.e. a cookie with an expiration date in the
 future) to keep track of how many times the client computer has visited the page. Use set
 Max Age method to remain on the client’s computer for one month. Display the number
-of page hits (i.e. cookie’s value) every time the page loads.
+of page hits (i.e. cookie’s value) every time the page loads. 
 
 14. Write JSP program that asks user his favourite color as request parameter and sets it as the
 background color of the page or sets the background color white if the parameter value is
