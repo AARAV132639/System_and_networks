@@ -1,8 +1,8 @@
 # Target List
 
-1. Write a program in Java, to implements the Stack data Structure.
+1. Write a program in Java, to implements the Stack data Structure. [done]
 
-2. Write a program in Java to implement a simple Bank Account.
+2. Write a program in Java to implement a simple Bank Account. [done]
 
 3. Write a program in Java showing the action from three threads using a suitable example
 
