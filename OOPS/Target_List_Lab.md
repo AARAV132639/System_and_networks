@@ -26,3 +26,6 @@ for your classes. Then create a class with a main () method that manages your cl
 
 ---Applet, Servlet, JSP removed due to being obselete--- 
 
+--- Not finding java fun---
+
+---Signing out---
